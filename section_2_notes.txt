@@ -1,0 +1,16 @@
+I am not using react 16 as I didn't want to downgrade so I am using an alternative enzyme adapter
+    https://www.npmjs.com/package/@wojtekmaj/enzyme-adapter-react-17
+
+Her formatting makes my eyes bleed
+
+I am not sure I agree with not using 'id' or 'class' in favor of data-test.  The behavior I think is part of the component and if that component's name is changed we should be asking why?
+    Is the component serving a different purpose, we should make a new name....
+    If the component is being replaced by a new component we should be expecting that id.
+    If we are making this current component contain another should we really be changing the test name targets while that other component should also have a similar level of testing
+
+    now I do like the idea of 'data-test' as a name but this is now another tag that "developers" need to maintain in functional code internal documentation
+        Where as the code and tests could be doing this with clean maintenance of the tags that should be in use already
+
+
+Yes babel remove properties is great but if an app can keep it's attributes well maintained that is one less package you could be having to add
+
