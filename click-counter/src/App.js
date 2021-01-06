@@ -3,10 +3,23 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+    const [count, setCount] = React.useState(0);
+
   return (
     <div data-test="component-app">
-        <h1 data-test="counter-display">The counter is currently</h1>
-        <button data-test="increment-button">Increment counter</button>
+        <h1 data-test="counter-display">
+            The counter is currently&nbsp;
+            <span data-test="count">{count}</span>
+        </h1>
+        <button
+            data-test="increment-button"
+            onClick={() => setCount(count + 1)}
+        >Increment counter</button>
+        <button
+            data-test="decrement-button"
+            onClick={() => setCount(count - 1)}
+        >Decrement counter</button>
     </div>
   );
 }
