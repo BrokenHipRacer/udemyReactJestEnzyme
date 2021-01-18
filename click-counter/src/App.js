@@ -21,7 +21,7 @@ function App() {
             <button
                 data-test="increment-button"
                 onClick={() => {
-                    setCountZeroError( countZeroError - 1);
+                    setCountZeroError( 0);
                     setCount(count + 1);
                 }}
             >Increment counter</button>
@@ -29,7 +29,7 @@ function App() {
                 data-test="decrement-button"
                 onClick={() => {
                     if (count === 0) {
-                        setCountZeroError(countZeroError + 1);
+                        setCountZeroError(1);
                     } else {
                         setCount(count - 1);
                     }
