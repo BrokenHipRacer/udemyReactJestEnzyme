@@ -1,9 +1,16 @@
+import { actionTypes } from '../actions';
+
 /**
  * @function successReducer
- * @param state
- * @param action
- * @returns {null}
+ * @param {boolean} state - Current success state
+ * @param {object} action - Action to be reduced
+ * @returns {boolean} - New success state
  */
-export default (state, action) => {
-    return null;
+export default (state= false, action) => {
+    switch (action.type) {
+        case (actionTypes.CORRECT_GUESS):
+            return true;
+        default:
+            return state;
+    }
 }
