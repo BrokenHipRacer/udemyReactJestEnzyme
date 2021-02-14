@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class Input extends Component {
     render() {
-        const contnents = this.props.success
+        const contents = this.props.success
             ? null
             : (
                 <form className="form-inline">
@@ -13,7 +13,7 @@ class Input extends Component {
             );
         return (
             <div data-test="component-input">
-                {contnents}
+                {contents}
             </div>
         );
     };
