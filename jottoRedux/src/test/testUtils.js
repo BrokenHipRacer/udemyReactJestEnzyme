@@ -12,8 +12,8 @@ import { middlewares } from "../configureStore";
  * @returns {Store} - Redux store
  */
 export const storeFactory = (initialState) => {
-    const createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore);
-    return createStoreWithMiddleware(rootReducer, initialState);
+  const createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore);
+  return createStoreWithMiddleware(rootReducer, initialState);
 }
 
 /**
@@ -23,7 +23,7 @@ export const storeFactory = (initialState) => {
  * @returns {ShallowWrapper} - anything(s) found
  */
 export const findByAttr = (wrapper, val) => {
-    return wrapper.find(`[data-test="${val}"]`);
+  return wrapper.find(`[data-test="${val}"]`);
 }
 
 /**
@@ -32,10 +32,10 @@ export const findByAttr = (wrapper, val) => {
  * @param {Object} conformingProps - props to test for.
  */
 export const checkProps = (component, conformingProps) => {
-    const propError = checkPropTypes(
-        component.propTypes,
-        conformingProps,
-        'prop',
-        component.name);
-    expect(propError).toBeUndefined();
+  const propError = checkPropTypes(
+    component.propTypes,
+    conformingProps,
+    'prop',
+    component.name);
+  expect(propError).toBeUndefined();
 }

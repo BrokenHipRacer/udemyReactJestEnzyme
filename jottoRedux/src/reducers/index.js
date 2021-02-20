@@ -4,7 +4,7 @@ import guessedWords from "./guessedWordReducer";
 import secretWord from "./secretWordReduer";
 
 export default combineReducers({
-    success,
-    guessedWords,
-    secretWord
+  success,
+  guessedWords,
+  secretWord
 });
